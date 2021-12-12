@@ -1,0 +1,12 @@
+ HashMap<Integer, Integer> mep = new HashMap<Integer, Integer>();
+
+        for(int i=0;i<nums.length;i++)
+        {
+            int comp = target - nums[i];
+            if(mep.containsKey(comp))
+            {
+                return new int[] {mep.get(comp),i};
+            }
+            mep.put(nums[i],i);
+            
+        }
